@@ -20,8 +20,9 @@
 </nav>
 
     <header class="hero-large">
-        <div class="container"> <div class="hero-text">
-                <h1>Jelajahi Keindahan Nusantara Bersama <span style="color: var(--accent);">Ridho</span></h1>
+        <div class="container"> 
+            <div class="hero-text">
+                <h1>Jelajahi Keindahan Nusantara Bersama <span style="color: #ff9f43;">Ridho</span></h1>
                 <p>Dari Sabang sampai Merauke, temukan pengalaman yang tak terlupakan dengan pelayanan terbaik.</p>
                 <div style="margin-top: 30px;">
                     <a href="product.html" class="btn-main">Mulai Petualangan</a>
@@ -29,15 +30,25 @@
             </div>
         </div>
     </header>
+    <div class="music-player">
+        <p>🎵 Santai</p>
+        <audio id="bgMusic" controls style="height: 30px; width: 200px;">
+            <source src="assets/audio/bas.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 <strong>TravelYuk x Ridho</strong>. All Rights Reserved.</p>
-                <p style="font-size: 0.8rem; opacity: 0.6;">Information Technology Student Project</p>
+                <p>&copy; 2026 <strong>TravelRidho</strong>. All Rights Reserved.</p>
+                <p style="font-size: 0.8rem; opacity: 0.6;">Tugas</p>
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('bgMusic').volume = 0.3;
+    </script>
+</body>
 
 </body>
 </html>
