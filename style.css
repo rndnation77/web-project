@@ -100,7 +100,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: var(--dark);
+    color: blue;
     text-align: center;
 }
 
@@ -136,45 +136,68 @@ h2 {
 }
 
 
-nav {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    height: 80px;
+.nav-vertical-box {
+    background-color: #1a1a1e; 
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #fbc531; 
+    width: 100%;
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    justify-content: center;
+    height: auto;
 }
 
-.logo {
-    font-size: 1.6rem;
+
+.nav-vertical-box .logo {
+    font-size: 1.8rem;
     font-weight: 800;
-    color: var(--dark);
+    color: #ffffff; 
     letter-spacing: -1px;
+    margin-bottom: 25px; 
 }
 
-.logo span { color: var(--primary); }
+.nav-vertical-box .logo span { 
+    color: #fbc531; 
+}
 
-nav ul {
+
+.nav-vertical-box ul {
     display: flex;
+    flex-direction: column; 
     list-style: none;
-    gap: 35px;
+    gap: 20px; 
+    padding: 0;
 }
 
-nav ul li a {
+.nav-vertical-box ul li a {
     text-decoration: none;
-    color: var(--text-main);
+    color: #ffffff; 
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
     transition: var(--transition);
+    display: inline-block;
 }
 
-nav ul li a:hover {
-    color: var(--primary);
+
+.nav-vertical-box ul li a.active {
+    color: #fbc531;
+    border-bottom: 2px solid #fbc531;
+    padding-bottom: 4px;
+}
+
+.nav-vertical-box ul li a:hover {
+    color: #fbc531;
+}
+
+@media (max-width: 992px), (max-width: 768px) {
+    nav.nav-vertical-box,
+    .nav-vertical-box ul { 
+        display: flex !important; 
+        flex-direction: column !important;
+    }
 }
 
 
