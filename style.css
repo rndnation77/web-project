@@ -41,8 +41,8 @@ body {
     border-radius: 20px;
     max-width: 1200px;
     margin: 30px auto;
+    width: 95%; 
 }
-
 
 .item {
     background-color: #130135; 
@@ -55,6 +55,8 @@ body {
     font-size: 14px;
     border-radius: 8px;
     transition: var(--transition);
+    padding: 5px 10px;
+    text-align: center;
 }
 
 .item:hover {
@@ -75,7 +77,6 @@ body {
 .span-11 { grid-column: span 11; }
 .span-12 { grid-column: span 12; }
 
-
 .caption {
     grid-column: span 12;
     text-align: center;
@@ -84,11 +85,11 @@ body {
     margin-top: 10px;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 .section-padding {
@@ -99,7 +100,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    color: white;
+    color: var(--dark);
     text-align: center;
 }
 
@@ -125,6 +126,7 @@ h2 {
     display: inline-block;
     box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
     cursor: pointer;
+    text-align: center;
 }
 
 .btn-main:hover {
@@ -141,7 +143,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -175,6 +177,7 @@ nav ul li a:hover {
     color: var(--primary);
 }
 
+
 .hero-large {
     position: relative;
     height: 100vh; 
@@ -190,15 +193,29 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: var(--white);
+    padding: 0 20px;
 }
+
+.hero-text h1 { 
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-text h1 b, .hero-text h1 span {
+    color: var(--accent);
+}
+
 
 .music-player {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 10px;
     border-radius: 50px;
     display: flex;
@@ -211,23 +228,13 @@ nav ul li a:hover {
 .music-player p {
     font-size: 12px;
     color: white;
-    margin: 0 10px;
-}
-
-.hero-text h1 { 
-    font-size: 4rem; 
-    margin-bottom: 15px; 
-    font-weight: 800;
-}
-
-.hero-text h1 b, .hero-text h1 span {
-    color: var(--accent);
+    margin: 0 5px 0 10px;
 }
 
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 50px;
     text-align: left; 
@@ -240,6 +247,7 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
+    width: 100%;
 }
 
 .card:hover { transform: translateY(-12px); }
@@ -315,6 +323,7 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
     max-width: 650px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .form-group {
@@ -348,7 +357,9 @@ footer {
     color: var(--white);
     padding: 40px 0;
     text-align: center;
+    width: 100%;
 }
+
 
 .detail-wrapper {
     display: flex;
@@ -358,12 +369,14 @@ footer {
 
 .main-content {
     flex: 2; 
+    width: 100%;
 }
 
 .sidebar-booking {
     flex: 1; 
     position: sticky;
     top: 100px; 
+    width: 100%;
 }
 
 .detail-header-box {
@@ -450,22 +463,77 @@ footer {
 @media (max-width: 992px) {
     .detail-wrapper {
         flex-direction: column;
+        gap: 30px;
     }
     
     .sidebar-booking {
-        width: 100%;
         position: relative;
         top: 0;
     }
-    
-   
-    .span-4, .span-8, .span-5, .span-7 {
-        grid-column: span 12;
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
+        grid-column: span 12 !important;
     }
 }
 
+
 @media (max-width: 768px) {
-    .hero-text h1 { font-size: 2.5rem; }
-    nav ul { display: none; }
-    .stats { flex-direction: column; }
+   
+    .hero-text h1 { 
+        font-size: 2.3rem; 
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+
+    nav {
+        padding: 0 20px;
+    }
+    
+    nav ul { 
+        display: none; 
+    }
+
+
+    .stats { 
+        flex-direction: column; 
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .main-image img {
+        height: 250px;
+    }
+
+    .detail-header-box h1 {
+        font-size: 1.8rem;
+    }
+
+    .music-player {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px;
+    }
+    
+    .music-player p {
+        display: none; 
+    }
+    
+    .music-player audio {
+        width: 140px;
+    }
 }
