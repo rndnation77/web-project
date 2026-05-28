@@ -31,29 +31,26 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   SISTEM 12-COLUMN GRID TERPADU (TAMBAHAN BARU)
-   ========================================================================== */
-/* Wadah grid utama pembungkus alur elemen modular */
+
 .grid-container-layout {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Membagi baris menjadi 12 bagian sama rata */
-    gap: 15px; /* Jarak antar kolom modular */
-    background-color: #333333; /* Warna latar belakang gelap pembungkus */
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 15px; 
+    background-color: #333333; 
     padding: 20px;
     border-radius: 20px;
     max-width: 1200px;
     margin: 30px auto;
 }
 
-/* Gaya kotak modular kustom dengan skema warna Anda */
+
 .item {
-    background-color: #130135; /* Biru sangat tua (Navy) */
+    background-color: #130135; 
     min-height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d31919; /* Teks merah */
+    color: #d31919;
     font-weight: bold;
     font-size: 14px;
     border-radius: 8px;
@@ -65,7 +62,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Properti penentu bentang (span) kolom grid */
 .span-1  { grid-column: span 1; }
 .span-2  { grid-column: span 2; }
 .span-3  { grid-column: span 3; }
@@ -79,7 +75,7 @@ body {
 .span-11 { grid-column: span 11; }
 .span-12 { grid-column: span 12; }
 
-/* Teks Keterangan Tambahan */
+
 .caption {
     grid-column: span 12;
     text-align: center;
@@ -88,9 +84,7 @@ body {
     margin-top: 10px;
 }
 
-/* ==========================================================================
-   GAYA VISUAL ASLI YANG DIPERTAHANKAN
-   ========================================================================== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -139,7 +133,7 @@ h2 {
     box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4);
 }
 
-/* --- Navigation --- */
+
 nav {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -292,7 +286,7 @@ nav ul li a:hover {
     color: var(--white);
 }
 
-/* --- About & Stats --- */
+
 .stats {
     display: flex;
     justify-content: space-around;
@@ -313,7 +307,7 @@ nav ul li a:hover {
     font-weight: 800;
 }
 
-/* --- Contact Page Style --- */
+
 .contact-form {
     background: var(--white);
     padding: 50px;
@@ -452,7 +446,7 @@ footer {
 
 .note { font-size: 0.75rem; color: var(--text-muted); margin-top: 15px; }
 
-/* Responsive layout breakpoints */
+
 @media (max-width: 992px) {
     .detail-wrapper {
         flex-direction: column;
@@ -464,7 +458,7 @@ footer {
         top: 0;
     }
     
-    /* Layout grid adaptif pada perangkat tablet */
+   
     .span-4, .span-8, .span-5, .span-7 {
         grid-column: span 12;
     }
