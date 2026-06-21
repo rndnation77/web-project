@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TravelRidho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-vertical-box">
+    <div class="logo">Travel<span>Ridho</span></div>
+    
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Destinasi</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+    </ul>
+</nav>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2>Login Akun</h2>
+                <p style="color: var(--text-muted);">Silakan masuk untuk mengelola perjalanan Anda.</p>
+            </div>
+
+            <form class="contact-form" id="loginForm">
+                <div class="form-group">
+                    <label style="display:block; margin-bottom: 8px; font-weight:600;">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan username..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label style="display:block; margin-bottom: 8px; font-weight:600;">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password..." required>
+                </div>
+
+                <p id="errorMsg" style="color: red; text-align: center; margin-bottom: 15px; display: none; font-weight: 600;">
+                    Username atau password salah!
+                </p>
+
+                <button type="submit" class="btn-main" style="width: 100%; border-radius: 12px;">Masuk Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 TravelYuk. Project IT.</p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
